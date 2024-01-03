@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: c179729937e973c4c9c644dc37bdcd15
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - iconBlanket: {fileID: 21300000, guid: ed4511592283189428f62f4463383a9c, type: 3}
+  - iconKompas: {instanceID: 0}
+  - iconTulang: {fileID: 21300000, guid: 71e88812ef4aa7243a550bf518a04219, type: 3}
+  - iconKerang: {fileID: 21300000, guid: b9f6a05bd0d10df4985bc12f9aad72a6, type: 3}
+  - iconKetel: {fileID: 21300000, guid: e96d468019c796e47a0e11bfb06d91eb, type: 3}
+  - iconMutiara: {fileID: 21300000, guid: dec768e21d744b4408af54736facc257, type: 3}
+  - iconUndanganKerajaan: {fileID: 21300000, guid: a4c40472291ef1349b18b3322a4c056f, type: 3}
+  - iconPemetikPala: {fileID: 21300000, guid: 726ab272ef9dff34ca114fbc83b578dd, type: 3}
+  - iconOpium: {fileID: 21300000, guid: 89624f52ee47da6409896242154a6405, type: 3}
+  - iconMiras: {instanceID: 0}
+  - iconKoinEmas: {fileID: 21300000, guid: ccbd388b34b01684d9d37be0750d342d, type: 3}
+  - iconPalaBuruk: {fileID: 21300000, guid: ccd73536c2672a2458983c6e61e6c712, type: 3}
+  - iconPalaMentah: {instanceID: 0}
+  - iconPalaBagus: {fileID: 21300000, guid: cb5f6484ba72f1c4cb07dfd9d13744fe, type: 3}
+  - iconSilkDress: {instanceID: 0}
+  - iconKeySlave: {fileID: 21300000, guid: aade593193ce3394f89c72d95ba04ea9, type: 3}
+  - iconKeyBarn: {fileID: 21300000, guid: 6b7f47901a8a87a4499660ca554f125d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
