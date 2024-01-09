@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 52474678}
   - component: {fileID: 52474677}
-  - component: {fileID: 52474676}
   - component: {fileID: 52474675}
   m_Layer: 0
   m_Name: Main Camera (2)
@@ -162,14 +161,6 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
---- !u!81 &52474676
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52474674}
-  m_Enabled: 1
 --- !u!20 &52474677
 Camera:
   m_ObjectHideFlags: 0
@@ -1699,7 +1690,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestinantionPoint: {fileID: 1165217486}
-  ai: {fileID: 988284102}
+  ai: {fileID: 0}
+  seeker: {fileID: 0}
+  cameraTujuan: {fileID: 52474677}
+  cameraAwal: {fileID: 720014051}
 --- !u!1 &612902705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3009,9 +3003,9 @@ GameObject:
   - component: {fileID: 988284099}
   - component: {fileID: 988284098}
   - component: {fileID: 988284103}
-  - component: {fileID: 988284102}
   - component: {fileID: 988284101}
   - component: {fileID: 988284104}
+  - component: {fileID: 988284105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3111,35 +3105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 1344112740}
---- !u!114 &988284102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988284097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 4
-  autoRepath:
-    mode: 0
-    period: 0.5
-    sensitivity: 10
-    maximumPeriod: 2
-    visualizeSensitivity: 0
-  canMove: 1
-  speed: 3
-  orientation: 0
-  enableRotation: 0
-  rotationSpeed: 10
-  interpolatePathSwitches: 0
-  switchPathInterpolationSpeed: 5
-  targetCompatibility: {fileID: 0}
-  repathRateCompatibility: NaN
-  canSearchCompability: 0
 --- !u!114 &988284103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,6 +3146,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &988284105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988284097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 4
+  autoRepath:
+    mode: 2
+    period: 0.5
+    sensitivity: 10
+    maximumPeriod: 2
+    visualizeSensitivity: 0
+  canMove: 1
+  speed: 5
+  orientation: 1
+  enableRotation: 0
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+  targetCompatibility: {fileID: 0}
+  repathRateCompatibility: NaN
+  canSearchCompability: 0
 --- !u!1 &1130582583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,7 +4451,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestinantionPoint: {fileID: 441336388}
-  ai: {fileID: 988284102}
+  ai: {fileID: 0}
+  seeker: {fileID: 0}
+  cameraTujuan: {fileID: 720014051}
+  cameraAwal: {fileID: 52474677}
 --- !u!1 &1181114617
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,7 +5780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAA4IeymSjj0nAIAAK4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VN9v2jAQ/leQn1cpMErbvW1A6Sa1RaVTH0YfjH0QC8eO/KNAK/733TmBBLpJkZLcfXf3fXdnfzBlfAkiWDdxSt5bCexbh9E3+9JpnHew5StrZuodDpgXJUNOIJ4wTzwoi/YuhXlbQHBKfDcrTeAMjdGopXXFWK5gaH3waF5y7QFdzgaKNmj66LAtvnpXFLKrQ9/p3dnjlwATwDW4A6p7gopGaF6UIIlvA+4e0IN+ghlUUiMoXlitla9psLArk8wnviORUnGUlEoTNge1ygMRbQc+LpceQk3L8d1IOexMlZH9sFW7Cu7XFac3rmMq3rtOfKqk95/8F93kXjpb3B3qdjOqEXIl1shQcB9a/WybR6fEo9lwveYLDS85mAc7cTYaic7gIoVGD71R83uUNsxBrBt7RfXMGMvPgzmMjzTsk/rtUKtiUbvwd6Zt6vQN/YPDmfxEumkffI1CK3H47eGZr9qLUztulfMBXbVGQ+QWNjqCsnHqGGmJYWidAdfOUILhOuymmCecT/DM9/+oW05npK5e+w6rfxaSzA0+y85cU7tpZuXhVyzKqVUmzIA7kbfy+dxu7sHnjzFoZaCZAjkesItDa0y1ff4fYbPolly0wgJsQ3Qw4oGn/UdOuCSyHYodTREmak37mFRQ8j+ogp5X6nLOsa5OZvZgkRkaT96vtAerqOTplrOB4DdZ9jWDQa8/wOQXGUBvIfpdkQ2u5dXlJUvHQBnsOdfTqmn1qHCFTKPF4MofrrHOxPEyHTzp+Gai3gvrG6QySzsTDsA8VhmOYsFhEbwc5FgqlDmDEJRJy8c+5kxbsQY5Pyaap8aOt8HxeZNlzkr1ZgNZ5myYrq45I/PxWE0dvCnYUPGTZKBxdCCflYaCl+Tq7dn+L1BLAwQUAAAICAAAOCHsvwygPm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IztNRRUEovSizIKAaKGII4pZkpIHa0kllyoqWBgbFBqpmRiVlaYrKuQWqqUVKyiWGygZlFirmpqVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAOCHspko49JwCAACuBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAOCHsvwygPm0AAAB4AAAACQAkAAAAAAAAAAAAAADpAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAKEDAAAAAA==
+    dataString: UEsDBBQAAAgIAAA4IewGwhw9ngIAALEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VN9v2jAQ/leQn1cpMErbvW1A6Sa1RaVTH0YfjH0QC8eO/KNAK/733TmBBLpJkZLcfd/dfXdnfzBlfAkiWDdxSt5bCexbh9E3+9JpnHew5StrZuodDpgXJUNOIJ4wTzwoi/Yu0bwtIDglvpuVJnCGxmjU0rpiLFcwtD54NC+59oAuZwOxDZo+OmyLr94VUXY19Z3enT1+CTABXIM7oLonqGiE5kUJkuptwN0DetBPMINKagTxhdVa+boMFnZlkjkrc3BAOqXiqCplJ3gOapUHqrXNfVwuPYS6Msd3I+WwOVVQ9sNWHSu4X1dlvXEdU/7edSqpCnr/yX/RTe6ls8XdIW83oxwhV2L9xHeC+9Bqads8Oi08mg3Xa77Q8JKDebATZ6OR6AwuEjV66I2a36O0YQ5i3dirUs+Msfw8m8MEScM+qd8OtSoWtQt/Z9qmZt/QPzgcy08sN62Er1FopRp+e3jmq/bu1I5b5XxAV63RUHELGx1B2Th1jLTEMLTOgGtHKMFwHXZTjBPOJ3jm+z/rltMxqbPXvsP2n1GSucFn2ZlrajfNrDz8ikU5tcqEGXAn8lY8n9vNPfj8MQatDDRTIMcDdnFojam2z/+DNotuyUWLFmAbooMRDzwdAawJl0S2qdjRxDBRa9rHpIKC/0EV9LxSl3OOeXUyswdr0uk5eb/SHqyikqdbzgaC32TZ1wwGvf4Ag19kAL2F6HdFNriWV5eXLB0DZbDnXE+rptWjwhUyjRaDK3+4yToTx8t08KTjm4l6L6xvkMos7Uw4APNYRTiKBYdJ8H6QY6lQ5gxCUCYtH/uYM23FGuT8GGieGjveBsfnTZQ5K9WbDWSZs2G6veaMzMdjNXXwpmBDyU+CgcbRgXxWGgpekqu3Z/u/UEsDBBQAAAgIAAA4Iey/DKA+bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jO01FFQSi9KLMgoBooYgjilmSkgdrSSWXKipYGBsUGqmZGJWVpisq5BaqpRUrKJYbKBmUWKuampUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAA4IewGwhw9ngIAALEFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAA4Iey/DKA+bQAAAHgAAAAJACQAAAAAAAAAAAAAAOsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAowMAAAAA
     file_cachedStartup: {fileID: 0}
     cacheStartup: 0
   showNavGraphs: 1

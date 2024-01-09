@@ -8,6 +8,9 @@ public class TeleportController : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] private Transform teleportDestinantionPoint;
     [SerializeField] private AILerp ai;
+    [SerializeField] private Seeker seeker;
+    [SerializeField] private Camera cameraTujuan;
+    [SerializeField] private Camera cameraAwal;
 
     private GameObject player;
 
@@ -15,6 +18,7 @@ public class TeleportController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ai = player.GetComponent<AILerp>();
+        seeker = player.GetComponent<Seeker>();
     }
 
 
@@ -24,17 +28,28 @@ public class TeleportController : MonoBehaviour
         {
             if(Vector2.Distance(player.transform.position, transform.position)>0.3f)
             {
-                //ai.destination = teleportDestinantionPoint.position;
-                ai.Teleport(teleportDestinantionPoint.position);
-                if (ai.hasPath)
-                {
-                    
-                }
-               
-                player.transform.position = teleportDestinantionPoint.transform.position;
-                Debug.Log("Tele");
+                ai.Teleport(teleportDestinantionPoint.position, true);
+
+                // Set path baru dari posisi AI ke teleportDestinationPoint setelah teleportasi
+                seeker.StartPath(transform.position, teleportDestinantionPoint.position, OnPathComplete);
+                cameraTujuan.enabled = true;
+                cameraAwal.enabled = false;
+
             }
             
+        }
+    }
+
+    private void OnPathComplete(Path p)
+    {
+        if (!p.error)
+        {
+            // Set path baru ke AILerp
+            ai.SetPath(p);
+        }
+        else
+        {
+            Debug.LogError("Terjadi kesalahan saat menghitung path baru: " + p.errorLog);
         }
     }
 
