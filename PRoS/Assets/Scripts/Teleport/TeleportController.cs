@@ -1,17 +1,19 @@
 using Pathfinding;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TeleportController : MonoBehaviour
 {
+    public event Action OnPlayerTeleport;
+
     [Header("Refrences")]
     [SerializeField] private Transform teleportDestinantionPoint;
-    [SerializeField] private AILerp ai;
-    [SerializeField] private Seeker seeker;
-    [SerializeField] private Camera cameraTujuan;
-    [SerializeField] private Camera cameraAwal;
+    
 
+    private AILerp ai;
+    private Seeker seeker;
     private GameObject player;
 
     private void Awake()
@@ -31,26 +33,27 @@ public class TeleportController : MonoBehaviour
                 ai.Teleport(teleportDestinantionPoint.position, true);
 
                 // Set path baru dari posisi AI ke teleportDestinationPoint setelah teleportasi
-                seeker.StartPath(transform.position, teleportDestinantionPoint.position, OnPathComplete);
-                cameraTujuan.enabled = true;
-                cameraAwal.enabled = false;
+                if (!ai.hasPath)
+                {
+                    seeker.StartPath(teleportDestinantionPoint.position, teleportDestinantionPoint.position, OnPathComplete) ;
+                }
+                OnPlayerTeleport?.Invoke();
 
             }
             
         }
     }
 
-    private void OnPathComplete(Path p)
+    void OnPathComplete(Path p)
     {
         if (!p.error)
         {
-            // Set path baru ke AILerp
-            ai.SetPath(p);
+            // Tidak perlu melakukan apa-apa di sini karena AILerp akan otomatis mengikuti path yang dihitung oleh Seeker
+           
         }
         else
         {
             Debug.LogError("Terjadi kesalahan saat menghitung path baru: " + p.errorLog);
         }
     }
-
 }
