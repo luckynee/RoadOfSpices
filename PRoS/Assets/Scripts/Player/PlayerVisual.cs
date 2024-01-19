@@ -46,8 +46,14 @@ public class PlayerVisual : MonoBehaviour
         {
             isMoving = false;
             animator.SetBool("isMoving", isMoving);
+
+            // If the player is not moving, set moveX and moveY directly to zero
+            animator.SetFloat("moveX", 0f);
+            animator.SetFloat("moveY", 0f);
         }
 
         lastPosition = currentPosition; // Menyimpan posisi terakhir untuk perbandingan di frame selanjutnya
     }
+
+
 }
