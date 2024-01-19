@@ -5,9 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class PindahScene : MonoBehaviour
 {
+    // SerializeField digunakan agar fungsi tetap dapat diakses dari Inspector
+    [SerializeField]
+    private string sceneTujuan;
+
     // Fungsi untuk memulai perpindahan scene
-    public void PindahKeSceneTujuan(string SampleScene)
+    private void PindahKeSceneTujuan()
     {
-        SceneManager.LoadScene(SampleScene);
+        SceneManager.LoadScene(sceneTujuan);
     }
+
+    // Fungsi untuk memulai perpindahan scene
+    //public void PindahKeSceneTujuan(string SampleScene)
+    //{
+        //SceneManager.LoadScene(SampleScene);
+    //}
 }
