@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour, Interactable
 {
-    public NPCQuest nPCQuest;
-    public bool canGiveReward = true;
-    public string rewardItemName;
+    [SerializeField] private NPCQuest nPCQuest;
+    [SerializeField] private bool canGiveReward = true;
+    [SerializeField] private string rewardItemName;
 
     //jika npc langsung memberikan item tanpa quest
-    public bool givesDirectReward = false;
-    public string directRewardItemName;
+    [SerializeField] private bool givesDirectReward = false;
+    [SerializeField] private string directRewardItemName;
 
     //apakah npc memiliki animasi
-    public bool hasAnimation = false;
+    [SerializeField] private bool hasAnimation = false;
 
-    [SerializeField] Dialog dialog;
+    [SerializeField] private Dialog dialog;
 
     private bool hasInteracted = false;
     private Animator animator;
