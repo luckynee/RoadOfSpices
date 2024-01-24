@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerVisual : MonoBehaviour
 {
+    public event EventHandler OnWalking;
+
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
 
@@ -12,7 +15,13 @@ public class PlayerVisual : MonoBehaviour
     private Vector3 lastPosition;
     private bool isMoving;
 
+    public Vector3 LastPosition { get { return lastPosition; } set {  lastPosition = value; } }
+
     [SerializeField] private float smoothing = 0.1f; // Nilai smoothing yang bisa diatur
+
+    // Adjust this value to control the rate of event invocation
+    [SerializeField] private float eventInvokeDelay = 0.5f;
+    private float timeSinceLastEvent;
 
     private void Awake()
     {
@@ -22,6 +31,7 @@ public class PlayerVisual : MonoBehaviour
     void Start()
     {
         lastPosition = transform.position;
+        timeSinceLastEvent = 0f;
     }
 
     void Update()
@@ -41,6 +51,14 @@ public class PlayerVisual : MonoBehaviour
 
             animator.SetFloat("moveX", smoothX);
             animator.SetFloat("moveY", smoothY);
+
+            // Check if enough time has passed since the last event invocation
+            if (Time.time - timeSinceLastEvent > eventInvokeDelay)
+            {
+                // Invoke the OnWalking event when the player is moving
+                OnWalking?.Invoke(this, EventArgs.Empty);
+                timeSinceLastEvent = Time.time; // Update the time of the last event invocation
+            }
         }
         else
         {
@@ -54,6 +72,4 @@ public class PlayerVisual : MonoBehaviour
 
         lastPosition = currentPosition; // Menyimpan posisi terakhir untuk perbandingan di frame selanjutnya
     }
-
-
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138135f3aa870354e97674e6e140a988, type: 3}
+  m_Name: SFX
+  m_EditorClassIdentifier: 
+  walkingInWoods: {fileID: 8300000, guid: 08c7bd4b15800db42824abada3d2313d, type: 3}
+  creekWalkingInWoods:
+  - {fileID: 8300000, guid: 2a20b2331270c44408b4201cb707501d, type: 3}
+  - {fileID: 8300000, guid: 6d2a2975a4c0b0047b3c8586847b5db6, type: 3}
+  - {fileID: 8300000, guid: 37f96e422c5f96b43a1f23ebbd7aaa36, type: 3}
+  - {fileID: 8300000, guid: f5fe09a103252404eae2145b6bc3e82e, type: 3}
+  - {fileID: 8300000, guid: c5c822766019608449a49b66450b39df, type: 3}
+  - {fileID: 8300000, guid: 797d9defa60c6a74fba544405ab5fa43, type: 3}
+  - {fileID: 8300000, guid: c0d7c62279343f04b8e43194975f1cc3, type: 3}
+  - {fileID: 8300000, guid: b3d190f9be40a6a4583f74de7dff7ba5, type: 3}
+  walkingInSand: {fileID: 8300000, guid: 548dfa1b70babee49b3fc507896eff5b, type: 3}
+  walkingInStone: {fileID: 8300000, guid: 18d22ac58d02abb42932c99d8aec7519, type: 3}
