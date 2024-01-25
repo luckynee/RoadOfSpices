@@ -5,7 +5,9 @@ using System;
 
 public class PlayerVisual : MonoBehaviour
 {
-    public event EventHandler OnWalking;
+    public event EventHandler OnWalkingOnWoods;
+    public event EventHandler OnWalkingOnStone;
+    public event EventHandler OnWalkingOnSand;
 
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
@@ -14,8 +16,11 @@ public class PlayerVisual : MonoBehaviour
 
     private Vector3 lastPosition;
     private bool isMoving;
+    private bool onWood;
+    private bool onStone;
+    private bool onSand;
 
-    public Vector3 LastPosition { get { return lastPosition; } set {  lastPosition = value; } }
+    public Vector3 LastPosition { get { return lastPosition; } set { lastPosition = value; } }
 
     [SerializeField] private float smoothing = 0.1f; // Nilai smoothing yang bisa diatur
 
@@ -31,7 +36,7 @@ public class PlayerVisual : MonoBehaviour
     void Start()
     {
         lastPosition = transform.position;
-        timeSinceLastEvent = 0f;
+        timeSinceLastEvent = Time.time; // Inisialisasi waktu sejak event terakhir diinvoke
     }
 
     void Update()
@@ -55,8 +60,20 @@ public class PlayerVisual : MonoBehaviour
             // Check if enough time has passed since the last event invocation
             if (Time.time - timeSinceLastEvent > eventInvokeDelay)
             {
-                // Invoke the OnWalking event when the player is moving
-                OnWalking?.Invoke(this, EventArgs.Empty);
+                // Invoke the appropriate event based on the current ground type
+                if (onWood)
+                {
+                    OnWalkingOnWoods?.Invoke(this, EventArgs.Empty);
+                }
+                else if (onStone)
+                {
+                    OnWalkingOnStone?.Invoke(this, EventArgs.Empty);
+                }
+                else if (onSand)
+                {
+                    OnWalkingOnSand?.Invoke(this, EventArgs.Empty);
+                }
+
                 timeSinceLastEvent = Time.time; // Update the time of the last event invocation
             }
         }
@@ -71,5 +88,33 @@ public class PlayerVisual : MonoBehaviour
         }
 
         lastPosition = currentPosition; // Menyimpan posisi terakhir untuk perbandingan di frame selanjutnya
+
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+       
+        // Update the ground type based on the collision
+        if (collision.CompareTag("Wood"))
+        {
+
+            onWood = true;
+            onStone = false;
+            onSand = false;
+        }
+        else if (collision.CompareTag("Sand"))
+        {
+            onSand = true;
+            onStone = false;
+            onWood = false;
+        }
+        else if (collision.CompareTag("Stone"))
+        {
+            onStone = true;
+            onSand = false;
+            onWood = false;
+        }
+    }
+
+  
 }

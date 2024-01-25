@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Teleporter
   - Wood
+  - Sand
+  - Stone
   layers:
   - Default
   - TransparentFX
