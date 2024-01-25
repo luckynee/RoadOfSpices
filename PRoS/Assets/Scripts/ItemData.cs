@@ -6,10 +6,9 @@ using UnityEngine;
 public class ItemData : ScriptableObject
 {
     public new string name;
-    public string description;
-
     public Sprite visual;
-
+    [TextArea]
+    public string description;
     public int nameItem;
     public int itemFunction;
 }
