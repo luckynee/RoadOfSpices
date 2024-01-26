@@ -8,19 +8,43 @@ public class SoundManager : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] private AudioClipRefsSO audioClipRefsSO;
     [SerializeField] private PlayerVisual playerVisual;
+    [SerializeField] private AudioSource walkingAudio;
+    [SerializeField] private AudioSource walkingBackSoundAudio;
+    [SerializeField] private float eventInvokeDelay = 0.2f;
+    private float timeSinceLastEvent;
+
+
 
     private float volume = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerVisual.OnWalking += PlayerVisual_OnWalking;
+        playerVisual.OnWalkingOnWoods += PlayerVisual_OnWalkingOnWoods;
+        playerVisual.OnWalkingOnSand += PlayerVisual_OnWalkingOnSand;
+        playerVisual.OnWalkingOnStone += PlayerVisual_OnWalkingOnStone;
     }
 
-    private void PlayerVisual_OnWalking(object sender, System.EventArgs e)
+    private void PlayerVisual_OnWalkingOnStone(object sender, System.EventArgs e)
     {
-        PlayWalkingOnWoodSound(Vector3.zero,volume);
-        PlayCreekWalkingOnWoodSound(Vector3.zero, volume);
+        PlayWalkingOnStoneSound();
+    }
+
+    private void PlayerVisual_OnWalkingOnSand(object sender, System.EventArgs e)
+    {
+        PlayWalkingOnSandSound();
+    }
+
+    private void PlayerVisual_OnWalkingOnWoods(object sender, System.EventArgs e)
+    {
+        
+        PlayWalkingOnWoodsSound();
+        if (Time.time - timeSinceLastEvent > eventInvokeDelay)
+        {
+            PlayCreekWalkingOnWoodsSound();
+            timeSinceLastEvent = Time.time;
+        }
+            
 
     }
 
@@ -30,23 +54,24 @@ public class SoundManager : MonoBehaviour
         
     }
 
-    private void PlaySound(AudioClip[] audioClipArray, Vector3 position, float volume = 1f)
+    private void PlayWalkingOnWoodsSound()
     {
-        PlaySound(audioClipArray[Random.Range(0, audioClipArray.Length)], position, volume);
+        walkingAudio.PlayOneShot(audioClipRefsSO.walkingInWoods,volume);
     }
 
-    private void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplier = 1f)
+    private void PlayCreekWalkingOnWoodsSound()
     {
-        AudioSource.PlayClipAtPoint(audioClip, position, volumeMultiplier * volume);
+        walkingBackSoundAudio.PlayOneShot(audioClipRefsSO.creekWalkingInWoods[Random.Range(0, audioClipRefsSO.creekWalkingInWoods.Length)],volume);
     }
 
-    public void PlayWalkingOnWoodSound(Vector3 position, float volume)
+    private void PlayWalkingOnStoneSound()
     {
-        PlaySound(audioClipRefsSO.walkingInWoods, Vector3.zero, volume);
+        walkingAudio.PlayOneShot(audioClipRefsSO.walkingInStone, volume);
+
     }
 
-    public void PlayCreekWalkingOnWoodSound(Vector3 position, float volume)
+    private void PlayWalkingOnSandSound()
     {
-        PlaySound(audioClipRefsSO.creekWalkingInWoods, Vector3.zero , volume);;
+        walkingAudio.PlayOneShot(audioClipRefsSO.walkingInSand);
     }
 }
