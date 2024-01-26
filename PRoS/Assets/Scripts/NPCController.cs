@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour, Interactable
 {
+    //Jgn lupa beri Header agar mempermudah game designer ketika mengatur di editor contohnya [Header("Refrences")] --> Refrences bisa di ganti sesuka hati tergantung pada kebutuhan
     [SerializeField] private NPCQuest nPCQuest;
     [SerializeField] private bool canGiveReward = true;
     [SerializeField] private string rewardItemName;
@@ -17,12 +18,12 @@ public class NPCController : MonoBehaviour, Interactable
 
     [SerializeField] private Dialog dialog;
 
-    private bool hasInteracted = false;
-    private Animator animator;
+    private bool hasInteracted = false; // --> jgn sampai ada script yang tidak digunakan, jika tidak di gunakan hapus saja 
+    private Animator animator; // --> pindahakan ke scriptVisual
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // pisah visual dan logic
     }
 
     public void Interact()
@@ -55,7 +56,11 @@ public class NPCController : MonoBehaviour, Interactable
                         if (hasAnimation && animator != null)
                         {
                             //aktifkan animasi
-                            animator.SetBool("isQuestComplete", true);
+                            animator.SetBool("isQuestComplete", true); // ubah trigger menggunakan event agar bisa di akses script Visual NPC
+                            /* jgn gunakan string , buat variable const baru --> private const string ISQUESTCOMPLETE = "isQuestComplete";
+                            panggil pada animator contohnya animator.SetBool(ISQUESTCOMPLETE , true);
+                            naming convention untuk const adalah Caps smua 
+                            Setiap penggunaan string usahakan di buat const nya aja karena string itu case sensitive kalau ada salah penulisan akan error*/
                         }
                     }
                     
@@ -85,7 +90,7 @@ public class NPCController : MonoBehaviour, Interactable
 
                     if (hasAnimation && animator != null)
                     {
-                        animator.SetBool("isQuestComplete", true);
+                        animator.SetBool("isQuestComplete", true);//---> jgn menggunakan string
                     }
                 }
             }
@@ -108,4 +113,8 @@ public class NPCController : MonoBehaviour, Interactable
 
         return Player.Instance.inventory.CheckItemHave(nPCQuest.itemQuestName);
     }
+
+    /* ------NOTE-------
+     * jika ada banyak NPC dengan isi fungsi yang sama bisa coba menggunakan Interface atau abstact Class
+     */
 }

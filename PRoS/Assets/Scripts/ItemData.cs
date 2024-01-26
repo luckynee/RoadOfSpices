@@ -9,6 +9,6 @@ public class ItemData : ScriptableObject
     public Sprite visual;
     [TextArea]
     public string description;
-    public int nameItem;
-    public int itemFunction;
+    public int nameItem; // sudah ada name, nameItem harusnya gak di perlukan
+    public int itemFunction; //game kita ga terlalu butuh function
 }

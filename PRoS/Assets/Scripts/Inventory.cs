@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<string> items = new List<string>();
+    public List<string> items = new();
 
     public int itemPala;
     public int itemTulang;
@@ -25,17 +25,6 @@ public class Inventory : MonoBehaviour
     public int itemKeySlave;
     public int itemKeyBarn;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void AddItem(string item)
     {

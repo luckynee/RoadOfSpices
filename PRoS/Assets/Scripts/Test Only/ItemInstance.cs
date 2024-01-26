@@ -11,6 +11,5 @@ public class ItemInstance : MonoBehaviour
     public ItemInstance(ItemData itemData)
     {
         itemType = itemData;
-        function = itemData.itemFunction;
     }
 }
