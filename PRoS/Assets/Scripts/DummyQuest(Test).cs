@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class DummyQuest : MonoBehaviour
 {
-    public static Player Instance;
-    public PlayerController movement;
-    public Inventory inventory;
+    public ScriptableObject TestQuest;
 
-    private void Awake()
-    {
-        Instance = this;
-
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,3 +18,4 @@ public class Player : MonoBehaviour
         
     }
 }
+

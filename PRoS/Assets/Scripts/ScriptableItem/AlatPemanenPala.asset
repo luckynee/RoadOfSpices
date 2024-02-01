@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f4839ff89ed4684d9ab0d5d75d8d8e9, type: 3}
+  m_Name: AlatPemanenPala
+  m_EditorClassIdentifier: 
+  itemName: AlatPemanenPala
+  itemIcon: {fileID: 21300000, guid: 726ab272ef9dff34ca114fbc83b578dd, type: 3}
+  itemDescription: 
