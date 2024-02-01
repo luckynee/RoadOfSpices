@@ -9,12 +9,13 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClipRefsSO audioClipRefsSO;
     [SerializeField] private PlayerVisual playerVisual;
     [SerializeField] private AudioSource walkingAudio;
-    [SerializeField] private AudioSource walkingBackSoundAudio;
+    [SerializeField] private AudioSource walkingBackSoundAudio; 
+    [SerializeField] private AudioSource interactSoundAudio;
+    [SerializeField] private AudioSource dialogueSoundAudio;
+
     [SerializeField] private float eventInvokeDelay = 0.2f;
+
     private float timeSinceLastEvent;
-
-
-
     private float volume = 1f;
 
     // Start is called before the first frame update
@@ -33,6 +34,11 @@ public class SoundManager : MonoBehaviour
     private void PlayerVisual_OnWalkingOnSand(object sender, System.EventArgs e)
     {
         PlayWalkingOnSandSound();
+        if (Time.time - timeSinceLastEvent > eventInvokeDelay)
+        {
+            PlayWalkingSupportOnSandSound();    
+            timeSinceLastEvent = Time.time;
+        }
     }
 
     private void PlayerVisual_OnWalkingOnWoods(object sender, System.EventArgs e)
@@ -54,6 +60,7 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    #region WalkingSound
     private void PlayWalkingOnWoodsSound()
     {
         walkingAudio.PlayOneShot(audioClipRefsSO.walkingInWoods,volume);
@@ -72,6 +79,33 @@ public class SoundManager : MonoBehaviour
 
     private void PlayWalkingOnSandSound()
     {
-        walkingAudio.PlayOneShot(audioClipRefsSO.walkingInSand);
+        walkingAudio.PlayOneShot(audioClipRefsSO.walkingInSand, volume);
     }
+
+    private void PlayWalkingSupportOnSandSound()
+    {
+        walkingBackSoundAudio.PlayOneShot(audioClipRefsSO.supportWalkingInSand[Random.Range(0, audioClipRefsSO.supportWalkingInSand.Length)], volume);
+    }
+    #endregion
+
+    #region InventorySound
+    private void PlayInventorySelectSound()
+    {
+        interactSoundAudio.PlayOneShot(audioClipRefsSO.inventorySelectSound,volume);
+    }
+
+    #endregion
+
+    #region DialogueSound
+    private void PlayOpenDialogueSound()
+    {
+        dialogueSoundAudio.PlayOneShot(audioClipRefsSO.dialoguePopUpSound,volume);
+    }
+
+    private void PlayOnQuestCompleteSound()
+    {
+        dialogueSoundAudio.PlayOneShot(audioClipRefsSO.questCompleteSound,volume);
+    }
+
+    #endregion
 }
