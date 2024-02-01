@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4839ff89ed4684d9ab0d5d75d8d8e9, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  name: Gold
-  description: Quest exchange gold for Silk Dress
-  visual: {fileID: 21300000, guid: ccbd388b34b01684d9d37be0750d342d, type: 3}
-  nameItem: 0
-  itemFunction: 0
+  itemName: Gold
+  itemIcon: {fileID: 21300000, guid: ccbd388b34b01684d9d37be0750d342d, type: 3}
+  itemDescription: 

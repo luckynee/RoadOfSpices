@@ -6,19 +6,20 @@ using UnityEngine.UI;
 public class UIButtonEquip : MonoBehaviour
 {
     public Image icon;
-    public Text itemName;
+    public Text itemNameText;
     public Button equipButton; // Tambahkan tombol equip pada Unity dan hubungkan ke sini
 
     private string equippedItemName;
 
-    public void SetItem(string itemName)
+    public void SetItem(ItemData item)
     {
-        this.itemName.text = itemName;
-        icon.sprite = ItemManager.instance.GetIcon(itemName);
+        itemNameText.text = item.itemName;
+        icon.sprite = ItemManager.instance.GetIcon(item);
 
-        equippedItemName = itemName;
+        equippedItemName = item.itemName;
 
         // Aktifkan tombol equip
+        equippedItemName = item.itemName; // Assign nama item langsung ke variabel
         equipButton.interactable = true;
     }
 

@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4839ff89ed4684d9ab0d5d75d8d8e9, type: 3}
   m_Name: SilkDress
   m_EditorClassIdentifier: 
-  name: SilkDress
-  description: 
-  visual: {fileID: 21300000, guid: 04e45885cbfe24243a1ef30b40bb1769, type: 3}
-  nameItem: 0
-  itemFunction: 0
+  itemName: SilkDress
+  itemIcon: {fileID: 21300000, guid: 04e45885cbfe24243a1ef30b40bb1769, type: 3}
+  itemDescription: 

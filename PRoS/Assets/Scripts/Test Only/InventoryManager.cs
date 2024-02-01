@@ -12,26 +12,26 @@ public class InventoryManager : ScriptableObject
     public OnItemChanged onItemChangedCallback;
 
 // Fungsi untuk menambah item ke inventori
-    public void AddItem(ItemData item)
+    public void AddItem(ItemData itemData)
     {
-        items.Add(item);
+        items.Add(itemData);
 
         // Panggil callback untuk memberi tahu perubahan pada inventori
         onItemChangedCallback?.Invoke();
     }
 
 // Fungsi untuk menghapus item dari inventori
-    public void RemoveItem(ItemData item)
+    public void RemoveItem(ItemData itemData)
     {
-        items.Remove(item);
-
+        items.Remove(itemData);
+        UIInventory.instance.RemoveItemFromUI(itemData);
         // Panggil callback untuk memberi tahu perubahan pada inventori
         onItemChangedCallback?.Invoke();
     }
 
     // Fungsi untuk mengecek apakah item sudah ada di inventori
-    public bool HasItem(ItemData item)
+    public bool HasItem(ItemData itemData)
     {
-        return items.Contains(item);
+        return items.Contains(itemData);
     }
 }

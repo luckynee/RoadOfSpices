@@ -1,24 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class NPCController : MonoBehaviour, Interactable
 {
+    
+    public event EventHandler OnDialogStart;
+    public event EventHandler OnQuestFinish;
     //Jgn lupa beri Header agar mempermudah game designer ketika mengatur di editor contohnya [Header("Refrences")] --> Refrences bisa di ganti sesuka hati tergantung pada kebutuhan
     [SerializeField] private NPCQuest nPCQuest;
+    [Header("NPC Can Give Item?")]
     [SerializeField] private bool canGiveReward = true;
-    [SerializeField] private string rewardItemName;
+    [SerializeField] private ItemData rewardItemName;
 
     //jika npc langsung memberikan item tanpa quest
+    [Header("NPC Give Direct Item")]
     [SerializeField] private bool givesDirectReward = false;
-    [SerializeField] private string directRewardItemName;
+    [SerializeField] private ItemData directRewardItemName;
 
     //apakah npc memiliki animasi
+    [Header("Animation NPC")]
     [SerializeField] private bool hasAnimation = false;
 
+    [Header("Dialog")]
     [SerializeField] private Dialog dialog;
 
-    private bool hasInteracted = false; // --> jgn sampai ada script yang tidak digunakan, jika tidak di gunakan hapus saja 
+    private const string ISQUESTCOMPLETE = "isQuestComplete";
+
     private Animator animator; // --> pindahakan ke scriptVisual
 
     void Start()
@@ -27,92 +37,82 @@ public class NPCController : MonoBehaviour, Interactable
     }
 
     public void Interact()
+{
+        OnDialogStart?.Invoke(this, EventArgs.Empty);
+        if (nPCQuest.isHaveQuest)
     {
-        if(nPCQuest.isHaveQuest) 
+        if (nPCQuest.isOnQuestGiven)
         {
-            if(nPCQuest.isOnQuestGiven) 
+            bool isPlayerHaveQuestItem = CheckPlayerInventoryForQuestItem();
+
+            if (isPlayerHaveQuestItem)
             {
-                bool isPlayerHaveQuestItem = CheckPlayerInventoryForQuestItem();
+                // kasih item -> kurangin inventory item nya
+                OnQuestFinish?.Invoke(this, EventArgs.Empty);
+                Player.Instance.inventory.RemoveItem(nPCQuest.itemData);
 
-                if(isPlayerHaveQuestItem) 
+                // dialog npc terima kasih
+                // ubah dialog NPC setelah menerima quest item
+                StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogDiKasihItemQuest));
+
+                //nonaktifkan quest pada NPC
+                nPCQuest.isHaveQuest = false;
+
+                // *optional = npc kasih item baru
+                if (canGiveReward)
                 {
-                    // kasih item -> kurangin inventory item nya
-                    Player.Instance.inventory.SubtractItem(nPCQuest.itemQuestName);
+                    //beri hadiah item ke player
+                    Player.Instance.inventory.AddItem(rewardItemName);
 
-                    // dialog npc terima kasih
-                    // ubah dialog NPC setelah menerima quest item
-                    StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogDiKasihItemQuest));
-                    
-                    //nonaktifkan quest pada NPC
-                    nPCQuest.isHaveQuest = false;
-
-                    // *optional = npc kasih item baru
-                    if (canGiveReward)
+                    //jika ada animasi 
+                    if (hasAnimation && animator != null)
                     {
-                        //beri hadiah item ke player
-                        Player.Instance.inventory.AddItem(rewardItemName);
-
-                        //jika ada animasi 
-                        if (hasAnimation && animator != null)
-                        {
-                            //aktifkan animasi
-                            animator.SetBool("isQuestComplete", true); // ubah trigger menggunakan event agar bisa di akses script Visual NPC
-                            /* jgn gunakan string , buat variable const baru --> private const string ISQUESTCOMPLETE = "isQuestComplete";
-                            panggil pada animator contohnya animator.SetBool(ISQUESTCOMPLETE , true);
-                            naming convention untuk const adalah Caps smua 
-                            Setiap penggunaan string usahakan di buat const nya aja karena string itu case sensitive kalau ada salah penulisan akan error*/
-                        }
+                        //aktifkan animasi
+                        animator.SetBool(ISQUESTCOMPLETE, true); 
                     }
-                    
+                }
 
-                    PlayerQuest.instance.activeQuestItem = "";
-                }
-                else 
-                {
-                    // Update dialog NPC setelah menyelesaikan quest
-                    StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogLagiNgasihQuest));
-                }
+                PlayerQuest.instance.activeQuestItem = "";
             }
             else 
             {
-                // Update dialog NPC ketika memberikan quest
-                StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogBelumNgasihQuest));
-                nPCQuest.isOnQuestGiven = true;
-
-                // minta barang
-                PlayerQuest.instance.AddItemRequested(nPCQuest.itemQuestName);
-
-                //NPC memberikan quest atau dialog biasa
-                if (givesDirectReward)
-                {
-                    //berikan hadiah langsung ke player
-                    Player.Instance.inventory.AddItem(directRewardItemName);
-
-                    if (hasAnimation && animator != null)
-                    {
-                        animator.SetBool("isQuestComplete", true);//---> jgn menggunakan string
-                    }
-                }
+                // Update dialog NPC setelah menyelesaikan quest
+                StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogLagiNgasihQuest));
             }
         }
         else 
         {
+            // Update dialog NPC ketika memberikan quest
+            StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogBelumNgasihQuest));
+            nPCQuest.isOnQuestGiven = true;
+
+            // minta barang
+            PlayerQuest.instance.AddItemRequested(nPCQuest.itemData);
+
+            //NPC memberikan quest atau dialog biasa
+            if (givesDirectReward)
             {
-                //Ngobrol biasa (tidak ada quest)
-                StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+                //berikan hadiah langsung ke player
+                Player.Instance.inventory.AddItem(directRewardItemName);
+
+                if (hasAnimation && animator != null)
+                {
+                    animator.SetBool(ISQUESTCOMPLETE, true);
+                }
             }
-            
         }
-        
     }
-
-    private bool CheckPlayerInventoryForQuestItem()
+    else 
     {
-        // Panggil method dari PlayerController.Instance
-        //return PlayerController.Instance.CheckPlayerInventoryForQuestItem(nPCQuest.questItem);
-
-        return Player.Instance.inventory.CheckItemHave(nPCQuest.itemQuestName);
+        //Ngobrol biasa (tidak ada quest)
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
     }
+}
+
+private bool CheckPlayerInventoryForQuestItem()
+{
+    return Player.Instance.inventory.HasItem(nPCQuest.itemData);
+}
 
     /* ------NOTE-------
      * jika ada banyak NPC dengan isi fungsi yang sama bisa coba menggunakan Interface atau abstact Class

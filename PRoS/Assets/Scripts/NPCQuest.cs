@@ -7,10 +7,10 @@ using UnityEngine;
 public class NPCQuest : MonoBehaviour
 {
     public bool isHaveQuest;
-    public string itemQuestName; /* ubah jadi scriptable object item   misalnya --> public ItemData itemData; 
+    public ItemData itemData; /* ubah jadi scriptable object item   misalnya --> public ItemData itemData; 
                                   Nanti tinggal di masukkan item apa yg di perlukan dalam quest di editor */
     public bool isOnQuestGiven;
-    public Dialog dialogBelumNgasihQuest; 
+    public Dialog dialogBelumNgasihQuest;
     public Dialog dialogLagiNgasihQuest;
     public Dialog dialogDiKasihItemQuest;
 }

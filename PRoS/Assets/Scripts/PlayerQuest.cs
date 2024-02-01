@@ -12,9 +12,9 @@ public class PlayerQuest : MonoBehaviour
     {
         instance = this;
     }
-    
-    public void AddItemRequested(string itemRequested) 
+
+    public void AddItemRequested(ItemData itemData)
     {
-        activeQuestItem = itemRequested;
+        activeQuestItem = itemData.itemName; // Ganti menjadi itemData.itemName
     }
 }
