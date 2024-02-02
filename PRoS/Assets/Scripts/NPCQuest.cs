@@ -6,11 +6,19 @@ using UnityEngine;
 //penamaan scriptableObject kasi SO di belakang contohnya NPCQuestSO
 public class NPCQuest : MonoBehaviour
 {
+    [Header("NPC Quest or NPC Non Quest")]
     public bool isHaveQuest;
+    
+    [Header("This Quest is Active")]
+    public bool isOnQuestGiven;
+    [Header("NPC Dialog Give Quest")]
+    public Dialog dialogBelumNgasihQuest;
+    [Header("NPC Request Item to Complete Quest")]
     public ItemData itemData; /* ubah jadi scriptable object item   misalnya --> public ItemData itemData; 
                                   Nanti tinggal di masukkan item apa yg di perlukan dalam quest di editor */
-    public bool isOnQuestGiven;
-    public Dialog dialogBelumNgasihQuest;
+    [Header("NPC Dialog Remind the Quest")]
     public Dialog dialogLagiNgasihQuest;
+    [Header("NPC Dialog Quest Complete + Give Item")]
     public Dialog dialogDiKasihItemQuest;
+    
 }
