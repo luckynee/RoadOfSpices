@@ -48,7 +48,7 @@ public class NPCController : MonoBehaviour, Interactable
                 {
                     // kasih item -> kurangin inventory item nya
                     OnQuestFinish?.Invoke(this, EventArgs.Empty);
-                    Player.Instance.inventory.RemoveItem(nPCQuest.itemData);
+                    Inventory.Instance.RemoveItem(nPCQuest.itemData);
 
                     // dialog npc terima kasih
                     // ubah dialog NPC setelah menerima quest item
@@ -61,7 +61,7 @@ public class NPCController : MonoBehaviour, Interactable
                     if (canGiveReward)
                     {
                         //beri hadiah item ke player
-                        Player.Instance.inventory.AddItem(rewardItemName);
+                        Inventory.Instance.AddItem(rewardItemName);
 
                         //jika ada animasi 
                         if (hasAnimation && animator != null)
@@ -92,7 +92,7 @@ public class NPCController : MonoBehaviour, Interactable
                 if (givesDirectReward)
                 {
                     //berikan hadiah langsung ke player
-                    Player.Instance.inventory.AddItem(directRewardItemName);
+                    Inventory.Instance.AddItem(directRewardItemName);
 
                     if (hasAnimation && animator != null)
                     {
@@ -110,7 +110,7 @@ public class NPCController : MonoBehaviour, Interactable
 
     private bool CheckPlayerInventoryForQuestItem()
     {
-        return Player.Instance.inventory.HasItem(nPCQuest.itemData);
+        return Inventory.Instance.HasItem(nPCQuest.itemData);
     }
 
     /* ------NOTE-------

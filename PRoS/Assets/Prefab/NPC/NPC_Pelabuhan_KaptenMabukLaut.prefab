@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -790415607
+  m_SortingLayerID: -933648901
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 61998c8dbc73d184bb7a79e1e9ba9e09, type: 3}
@@ -173,8 +173,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nPCQuest: {fileID: 5213637498600194588}
-  rewardItemName: Tulang
   canGiveReward: 1
+  rewardItemName: {fileID: 0}
+  givesDirectReward: 0
+  directRewardItemName: {fileID: 0}
+  hasAnimation: 0
   dialog:
     lines:
     - "I\u2019ve been working for weeks! "
@@ -191,7 +194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4fe7164fa76e09498f5cd9f853393ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemQuestName: Blanket
   isHaveQuest: 1
   isOnQuestGiven: 0
   dialogBelumNgasihQuest:
@@ -201,6 +203,7 @@ MonoBehaviour:
     - 'The land full of spices! '
     - Now please find me something.
     - "I want to sleep but it\u2019s too cold!"
+  itemData: {fileID: 0}
   dialogLagiNgasihQuest:
     lines:
     - Carikan saya selimut su!!!
