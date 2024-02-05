@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4669237002685740411, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.8
+      value: 21.91
       objectReference: {fileID: 0}
     - target: {fileID: 4669237002685740411, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -261,6 +261,22 @@ PrefabInstance:
     - target: {fileID: 5162502953325937363, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: m_SortingLayerID
       value: -933648901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: isHaveQuest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: canGiveReward
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: 'Thank you, Riant. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Only some survived from the genocide and now I want to be free.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1221,6 +1237,50 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -933648901
       objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b6ddb0c14ace3342acf772d15354752, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: No one will pass my guard.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[1]
+      value: "It\u2019s either you will be punished to death or prisoned for life!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: Only Royals and Guests are allowed to come in!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[1]
+      value: Now step away!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: "It\u2019s one of the best item. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[1]
+      value: 'Just leave it there and I will pretend I never see you. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Is it just me or is that a ghost?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1502,6 +1562,52 @@ PrefabInstance:
     - target: {fileID: 5162502953325937363, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: m_SortingLayerID
       value: -933648901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: fdb5e8792df0a1c449ff5d5027b812c9, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: Even with lots of fruits like these, I can't eat them because he always
+        finds out...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: I've been in servitude to my master since the tragedy of 1607.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: 'This is from him? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[1]
+      value: You have my best regards.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[2]
+      value: Send my message to him, will you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: rewardItemName
+      value: 
+      objectReference: {fileID: 11400000, guid: 66ba192944381bf4cb79a36c1baacfec, type: 2}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: I don't have much else, but you can check out the warehouse before he
+        returns.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5155,6 +5261,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &708691821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3517932828344217581, guid: 72a7fcd22779c234586a8b32d56ff5c4, type: 3}
+  m_PrefabInstance: {fileID: 1702620199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &708691822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708691821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d606757b40e7b1a4cbfcb6504a454dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 6b098d705a6700747b1ce9400b0e7135, type: 2}
 --- !u!1 &719079255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5312,11 +5436,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHaveQuest: 1
-  itemData: {fileID: 11400000, guid: ca892781183bf304788a3f74067c3a97, type: 2}
   isOnQuestGiven: 0
   dialogBelumNgasihQuest:
     lines:
     - Grr
+  itemData: {fileID: 11400000, guid: ca892781183bf304788a3f74067c3a97, type: 2}
   dialogLagiNgasihQuest:
     lines:
     - Grrr
@@ -8834,6 +8958,78 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -933648901
       objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 428a31cd673cefa47889ced5fb0fc089, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: After a hard day's work, it's time for some relaxation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[1]
+      value: Here, take this opium for a moment of respite.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: After a hard day's work, it's time for some relaxation.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[1]
+      value: Here, take this opium for a moment of respite.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[2]
+      value: "I want to sleep but it\u2019s too cold!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[3]
+      value: "I want to sleep but it\u2019s too cold!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: Ah, no worries!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[1]
+      value: We've all been there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[2]
+      value: 'Have some fun with this. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[3]
+      value: I swiped it from his house, haha.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[4]
+      value: 'Have some fun with this. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: rewardItemName
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b6ddb0c14ace3342acf772d15354752, type: 2}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: HAHAHAHAHAHAHAHAHAHAHA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8940,6 +9136,10 @@ PrefabInstance:
       value: -933648901
       objectReference: {fileID: 0}
     - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b098d705a6700747b1ce9400b0e7135, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: itemQuestName
       value: Clamp
       objectReference: {fileID: 0}
@@ -8947,6 +9147,59 @@ PrefabInstance:
       propertyPath: isOnQuestGiven
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: Do you want to buy or sell something, young one?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: Adventurer!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[1]
+      value: 'Greetings! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[2]
+      value: 'I''ve not crossed paths with one of your kind in this or another island. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[3]
+      value: Listen, do you want delights from fruits of the sea?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[4]
+      value: There lies a bunch of fresh fish where you may barter and trade.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[5]
+      value: Would you partake in the exchange of fins and scales?Would you partake
+        in the exchange of fins and scales?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: Wow, you're fortunate!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[1]
+      value: This pearl is the largest I've ever laid eyes on!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[2]
+      value: This pearl is the largest I've ever laid eyes on!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: rewardItemName
+      value: 
+      objectReference: {fileID: 11400000, guid: 1765234b7defd0d40a34019203c6ec12, type: 2}
     - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: givesDirectReward
       value: 1
@@ -9177,10 +9430,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHaveQuest: 0
-  itemData: {fileID: 0}
   isOnQuestGiven: 0
   dialogBelumNgasihQuest:
     lines: []
+  itemData: {fileID: 0}
   dialogLagiNgasihQuest:
     lines: []
   dialogDiKasihItemQuest:
@@ -9437,6 +9690,51 @@ PrefabInstance:
     - target: {fileID: 5162502953325937363, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: m_SortingLayerID
       value: -933648901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6135523cda21e714da893cce4d1bcb4e, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: It would be nice to have some tea while birdwatching.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: May the divine bestow their blessings upon our quest for Gold, Glory,
+        and Gospel.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: Young one, you truly possess a blessed heart.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[1]
+      value: In gratitude, accept this token from me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[2]
+      value: "Sorry about before. Here\u2019s for you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: rewardItemName
+      value: 
+      objectReference: {fileID: 11400000, guid: 16748458cfb7ee8478d63bd4f4b9d9c0, type: 2}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: The sky is clear, and it's an ideal moment for tea.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Would you care to join me?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10195,6 +10493,10 @@ PrefabInstance:
       value: -933648901
       objectReference: {fileID: 0}
     - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 16748458cfb7ee8478d63bd4f4b9d9c0, type: 2}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: itemQuestName
       value: Gold
       objectReference: {fileID: 0}
@@ -10261,7 +10563,7 @@ PrefabInstance:
     - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: rewardItemName
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: d1d3800eba5f21e44b2e4acf4e033763, type: 2}
     - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
       propertyPath: givesDirectReward
       value: 0
@@ -10377,14 +10679,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHaveQuest: 0
-  itemData: {fileID: 0}
   isOnQuestGiven: 0
   dialogBelumNgasihQuest:
-    lines: []
+    lines:
+    - I've encountered someone similar to you back in Ternate.
+    - He had a tan complexion and had an insatiable appetite.
+    - I nearly went broke dealing with him!
+  itemData: {fileID: 0}
   dialogLagiNgasihQuest:
-    lines: []
+    lines:
+    - Please leave!
+    - My time is too valuable to be wasted on someone like you!
   dialogDiKasihItemQuest:
-    lines: []
+    lines:
+    - Ah! But, um, I'll accept this not because I like you or anything!
 --- !u!114 &1421480968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10405,9 +10713,7 @@ MonoBehaviour:
   hasAnimation: 0
   dialog:
     lines:
-    - Halo
-    - Namaku Arsa
-    - Aku seorang Bajak Laut
+    - If you don't mind, I'll make my way to meet the Governor immediately!
 --- !u!61 &1421480969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16131,7 +16437,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3517932828344217581, guid: 72a7fcd22779c234586a8b32d56ff5c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 708691822}
   m_SourcePrefab: {fileID: 100100000, guid: 72a7fcd22779c234586a8b32d56ff5c4, type: 3}
 --- !u!1 &1729828154
 GameObject:
@@ -17103,6 +17412,38 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -933648901
       objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogLagiNgasihQuest.lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[0]
+      value: "I\u2019m thirsty."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogBelumNgasihQuest.lines.Array.data[1]
+      value: '*hiccup*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5213637498600194588, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialogDiKasihItemQuest.lines.Array.data[0]
+      value: What a way *hiccup* to be alive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "DON\u2019T DISTURB ME, YOUR HIGHNESS!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682290982134706080, guid: 10a52d72e6788aa4981f3a1b974f7d0e, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: '*hiccup*'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17784,7 +18125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &2106289278
 Grid:
   m_ObjectHideFlags: 0
