@@ -23,4 +23,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c0d7c62279343f04b8e43194975f1cc3, type: 3}
   - {fileID: 8300000, guid: b3d190f9be40a6a4583f74de7dff7ba5, type: 3}
   walkingInSand: {fileID: 8300000, guid: 548dfa1b70babee49b3fc507896eff5b, type: 3}
+  supportWalkingInSand:
+  - {fileID: 8300000, guid: 03ca28c1fc57d5d4095b8aaaf4ea77e9, type: 3}
+  - {fileID: 8300000, guid: 0f31794f874e99c41a5bedfda76689d6, type: 3}
+  - {fileID: 8300000, guid: ca1bf9c799eda1441bd2f2d27b969017, type: 3}
+  - {fileID: 8300000, guid: 928a0bc4016a0c8458fffb62f2dbe233, type: 3}
   walkingInStone: {fileID: 8300000, guid: 18d22ac58d02abb42932c99d8aec7519, type: 3}
+  inventorySelectSound: {fileID: 0}
+  inventoryAddItemSound: {fileID: 0}
+  dialoguePopUpSound: {fileID: 0}
+  questCompleteSound: {fileID: 0}

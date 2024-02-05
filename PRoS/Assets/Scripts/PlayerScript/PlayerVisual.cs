@@ -94,7 +94,7 @@ public class PlayerVisual : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
        
-        // Update the ground type based on the collision
+        // check for ground SFX
         if (collision.CompareTag("Wood"))
         {
 
@@ -114,6 +114,8 @@ public class PlayerVisual : MonoBehaviour
             onSand = false;
             onWood = false;
         }
+
+       
     }
 
   

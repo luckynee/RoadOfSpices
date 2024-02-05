@@ -6,13 +6,16 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [Header("Refrences")]
-    [SerializeField] private AudioClipRefsSO audioClipRefsSO;
     [SerializeField] private PlayerVisual playerVisual;
+
+    [Header("Refrences SFX")]
+    [SerializeField] private AudioClipRefsSO audioClipRefsSO;
     [SerializeField] private AudioSource walkingAudio;
     [SerializeField] private AudioSource walkingBackSoundAudio; 
     [SerializeField] private AudioSource interactSoundAudio;
     [SerializeField] private AudioSource dialogueSoundAudio;
 
+    [Header("Delay Antara Walk SFX dan Walk Support SFX")]
     [SerializeField] private float eventInvokeDelay = 0.2f;
 
     private float timeSinceLastEvent;
@@ -50,14 +53,6 @@ public class SoundManager : MonoBehaviour
             PlayCreekWalkingOnWoodsSound();
             timeSinceLastEvent = Time.time;
         }
-            
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     #region WalkingSound
@@ -108,4 +103,9 @@ public class SoundManager : MonoBehaviour
     }
 
     #endregion
+
+    public float GetVolume()
+    {
+        return volume;
+    }
 }

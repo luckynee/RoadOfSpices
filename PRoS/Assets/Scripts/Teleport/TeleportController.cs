@@ -10,8 +10,6 @@ public class TeleportController : MonoBehaviour
 
     [Header("Refrences")]
     [SerializeField] private Transform teleportDestinantionPoint;
-    
-
     private AILerp ai;
     private Seeker seeker;
     private GameObject player;
