@@ -123,6 +123,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17815883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17815884}
+  - component: {fileID: 17815885}
+  m_Layer: 0
+  m_Name: BentengAmbience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17815884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17815883}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190947699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &17815885
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17815883}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17b3d93e8c5195640b3d309a5c842327, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &20482212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
@@ -840,7 +968,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 614520ff38cad6245b68f0ff0daf91ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1011,6 +1139,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1819301741}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1267183851}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 17815885}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.62
@@ -1694,6 +1830,9 @@ Transform:
   - {fileID: 1974449785}
   - {fileID: 1739668776}
   - {fileID: 1190904656}
+  - {fileID: 17815884}
+  - {fileID: 1267183850}
+  - {fileID: 1085360992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212448992
@@ -1976,6 +2115,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1196027627}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1739668775}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.63
@@ -2270,7 +2417,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 285e1ae9ce8f18949af90d5574286790, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -2737,7 +2884,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 080a23cb0b4f4ce478c50c54ec54ecbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4658,7 +4805,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 524658367075839818, guid: db971c4e09147c747985928368caf24b, type: 3}
       propertyPath: m_SortingOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3430421693879710910, guid: db971c4e09147c747985928368caf24b, type: 3}
       propertyPath: m_Name
@@ -5404,6 +5551,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1833655276}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1974449784}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
@@ -5557,6 +5712,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1819301741}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 17815885}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.45
@@ -5626,6 +5789,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1434024365}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1974449784}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3199997
@@ -6320,6 +6491,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1842027159}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1085360993}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.84
@@ -7070,6 +7249,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 623697684}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1085360993}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.92
@@ -7635,7 +7822,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 8f874fc9b9834644d8a6eff13efcf446, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7801,6 +7988,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1833655276}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1739668775}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.21
@@ -7846,6 +8041,134 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+--- !u!1 &1085360991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085360992}
+  - component: {fileID: 1085360993}
+  m_Layer: 0
+  m_Name: HouseAmbience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1085360992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085360991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190947699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1085360993
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085360991}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 146ef88d902ccfe44a5d5e521294d0be, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1096060849
 GameObject:
   m_ObjectHideFlags: 0
@@ -8985,6 +9308,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1267183849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267183850}
+  - component: {fileID: 1267183851}
+  m_Layer: 0
+  m_Name: BukitAmbience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267183850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267183849}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190947699}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1267183851
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267183849}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17b3d93e8c5195640b3d309a5c842327, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1270899190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9009,6 +9460,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1842027159}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1974449784}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.63
@@ -9078,6 +9537,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1506212605}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 17815885}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1267183851}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.76
@@ -9881,6 +10348,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1096060849}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1739668775}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 349238920}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.52
@@ -10557,7 +11032,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 240bee26bc8ed344b97ddf513bcea4c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11023,6 +11498,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1543892373}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1974449784}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
@@ -11434,7 +11917,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 21acde7ae66574649872b214f6bc6290, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12652,6 +13135,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1196027627}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 349238920}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1739668775}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -14050,6 +14541,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1543892373}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 17815885}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1190904655}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
@@ -14124,6 +14623,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1434024365}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1974449784}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11
@@ -14488,6 +14995,14 @@ PrefabInstance:
       propertyPath: cameraToDisabled
       value: 
       objectReference: {fileID: 1434024365}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToEnabled
+      value: 
+      objectReference: {fileID: 1190904655}
+    - target: {fileID: 3630737155673747927, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
+      propertyPath: ambienceToDisabled
+      value: 
+      objectReference: {fileID: 1974449784}
     - target: {fileID: 4381230100186891583, guid: 35adc915588b09d4285e59cc13f79771, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.8
@@ -15327,7 +15842,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 8afdd4defc31fc64da06c89139e001f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
