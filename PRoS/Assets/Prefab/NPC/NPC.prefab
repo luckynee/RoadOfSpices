@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3560147302684452160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2535228555996145463}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC_Function
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5000931165649057263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC_Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
