@@ -7,12 +7,17 @@ using System;
 
 public class Inventory : MonoBehaviour
 {
-    
+    public static Inventory Instance;
     public List<ItemData> items;
-    public event EventHandler OnAddItem; 
+    public event EventHandler OnAddItem;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Update()
     {
-        Debug.Log(items.Count);
+        //Debug.Log(items.Count);
     }
     private void Start()
     {

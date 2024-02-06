@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,9 @@ public class ItemPickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Player.Instance.inventory.AddItem(itemData);
             Destroy(gameObject);
+            Inventory.Instance.AddItem(itemData);
+            Debug.Log("MasukIven");
         }
     }
 }

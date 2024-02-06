@@ -8,6 +8,7 @@ TagManager:
   - Wood
   - Sand
   - Stone
+  - NPC
   layers:
   - Default
   - TransparentFX
