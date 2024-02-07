@@ -15,6 +15,6 @@ public class PlayerQuest : MonoBehaviour
 
     public void AddItemRequested(ItemData itemData)
     {
-        activeQuestItem = itemData.itemName; // Ganti menjadi itemData.itemName
+        activeQuestItem = itemData.itemName; 
     }
 }

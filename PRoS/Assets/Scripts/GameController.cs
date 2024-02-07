@@ -5,7 +5,7 @@ using UnityEngine;
 public enum GameState { FreeRoam, Dialog, Battle}
 public class GameController : MonoBehaviour
 {
-    [SerializeField] PlayerController playerController;
+    [SerializeField] PlayerDialogQuest playerDialogQuest;
     [SerializeField] private Collider2D playerCollider;
 
     GameState state;
@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
     {
         if (state == GameState.FreeRoam)
         {
-            playerController.HandleUpdate();
+            
 
         } else if (state == GameState.Dialog)
         {

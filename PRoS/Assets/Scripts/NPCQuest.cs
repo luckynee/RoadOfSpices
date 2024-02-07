@@ -14,8 +14,7 @@ public class NPCQuest : MonoBehaviour
     [Header("NPC Dialog Give Quest")]
     public Dialog dialogBelumNgasihQuest;
     [Header("NPC Request Item to Complete Quest")]
-    public ItemData itemData; /* ubah jadi scriptable object item   misalnya --> public ItemData itemData; 
-                                  Nanti tinggal di masukkan item apa yg di perlukan dalam quest di editor */
+    public ItemData itemData; 
     [Header("NPC Dialog Remind the Quest")]
     public Dialog dialogLagiNgasihQuest;
     [Header("NPC Dialog Quest Complete + Give Item")]

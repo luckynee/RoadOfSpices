@@ -22,39 +22,30 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         Instance = this;
     }
-    
+
     public void HandleUpdate()
     {
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
-
             if (input.x != 0) input.y = 0;
-
             if (input != Vector2.zero)
             {
                 animator.SetFloat("moveX", input.x);
                 animator.SetFloat("moveY", input.y);
-
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
-
-                //nabrak solid 
                 if (IsWalkable(targetPos))
                     StartCoroutine(Move(targetPos));
             }
         }
-
         animator.SetBool("isMoving", isMoving);
-
-        // Pencet Z buat Talk to NPC
-        if (Input.GetKeyDown(KeyCode.Z))
-            Interact();
     }
+    
 
-    void Interact()
+    private void Interact()
     {
         var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
         var interactPos = transform.position + facingDir;
