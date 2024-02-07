@@ -26,6 +26,7 @@ public class TeleportController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+
             if(Vector2.Distance(player.transform.position, transform.position)>0.3f)
             {
                 ai.Teleport(teleportDestinantionPoint.position, true);
@@ -36,7 +37,7 @@ public class TeleportController : MonoBehaviour
                     seeker.StartPath(teleportDestinantionPoint.position, teleportDestinantionPoint.position, OnPathComplete) ;
                 }
                 OnPlayerTeleport?.Invoke();
-
+                
             }
             
         }
