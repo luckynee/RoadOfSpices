@@ -13,6 +13,8 @@ public class DialogManager : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] int lettersPerSecond;
 
+    private bool isDialogActive = false;
+
     public event Action OnShowDialog;
     public event Action OnHideDialog;
 
@@ -38,7 +40,7 @@ public class DialogManager : MonoBehaviour
 
     public void HandleUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Z) && !isTyping)
+        if (Input.GetMouseButtonDown(0) && !isTyping)
         {
             ++currentLine;
             if (currentLine < dialog.Lines.Count)

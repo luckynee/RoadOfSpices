@@ -13,6 +13,7 @@ public class PlayerDialogQuest : MonoBehaviour
         if (collision.CompareTag("NPC"))
         {
             Interact();
+            Debug.Log("SpamDisiniTagNPC");
         }
     }
 

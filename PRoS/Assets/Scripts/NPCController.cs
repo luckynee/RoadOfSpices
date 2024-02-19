@@ -35,6 +35,14 @@ public class NPCController : MonoBehaviour, Interactable
         animator = GetComponent<Animator>(); // pisah visual dan logic
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Interact();
+            Debug.Log("SpamDisiniTagPlayer");
+        }
+    }
     public void Interact()
     {
         OnDialogStart?.Invoke(this, EventArgs.Empty);
