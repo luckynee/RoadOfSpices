@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class NPCAnimator : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Animator animator; // --> pindahakan ke scriptVisual
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>(); // pisah visual dan logic
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

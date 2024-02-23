@@ -1,3 +1,4 @@
+using Pathfinding;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,6 +37,12 @@ public class DialogManager : MonoBehaviour
         this.dialog = dialog;
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
+        // Set canMove to true when dialog ends
+        AILerp aILerp = GameObject.FindObjectOfType<AILerp>();
+        if (aILerp != null)
+        {
+            aILerp.canMove = false;
+        }
     }
 
     public void HandleUpdate()
@@ -52,6 +59,12 @@ public class DialogManager : MonoBehaviour
                 dialogBox.SetActive(false);
                 currentLine = 0;
                 OnHideDialog?.Invoke();
+                // Set canMove to true when dialog ends
+                AILerp aILerp = GameObject.FindObjectOfType<AILerp>();
+                if (aILerp != null)
+                {
+                    aILerp.canMove = true;
+                }
             }
         }
     }
