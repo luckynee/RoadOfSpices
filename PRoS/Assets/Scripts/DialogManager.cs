@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [Header("Refrences")]
-    [SerializeField]private GameObject dialogBox;
+    [SerializeField] private GameObject dialogBox;
     [SerializeField] Text dialogText;
 
     [Header("Attributes")]
-    [SerializeField] int lettersPerSecond;
+    [SerializeField] private int lettersPerSecond;
 
     private bool isDialogActive = false;
 
@@ -37,12 +37,14 @@ public class DialogManager : MonoBehaviour
         this.dialog = dialog;
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
-        // Set canMove to true when dialog ends
+
+        // Set canMove to false when showing dialog
         AILerp aILerp = GameObject.FindObjectOfType<AILerp>();
         if (aILerp != null)
         {
             aILerp.canMove = false;
         }
+
     }
 
     public void HandleUpdate()
@@ -59,6 +61,7 @@ public class DialogManager : MonoBehaviour
                 dialogBox.SetActive(false);
                 currentLine = 0;
                 OnHideDialog?.Invoke();
+                
                 // Set canMove to true when dialog ends
                 AILerp aILerp = GameObject.FindObjectOfType<AILerp>();
                 if (aILerp != null)
