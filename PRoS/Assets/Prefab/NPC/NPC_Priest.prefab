@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1751669864093771906
+--- !u!1 &27952185906183915
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2694308395075790989}
-  - component: {fileID: 3604507002060628543}
-  - component: {fileID: 6702314739647635603}
-  - component: {fileID: 5897002773240608344}
-  - component: {fileID: 1479244728040862789}
+  - component: {fileID: 3066284707349729125}
+  - component: {fileID: 1423341611003906130}
+  - component: {fileID: 3074890288264492667}
+  - component: {fileID: 7878525507104311764}
+  - component: {fileID: 1660360919158512513}
   m_Layer: 8
   m_Name: NPC_Priest
   m_TagString: NPC
@@ -20,30 +20,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2694308395075790989
+--- !u!4 &3066284707349729125
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751669864093771906}
+  m_GameObject: {fileID: 27952185906183915}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.51, y: -51.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.04, y: -51.76, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 5047833043541297520}
+  - {fileID: 3776600274148574895}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &3604507002060628543
+--- !u!50 &1423341611003906130
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751669864093771906}
+  m_GameObject: {fileID: 27952185906183915}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -63,13 +63,61 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &6702314739647635603
+--- !u!114 &3074890288264492667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27952185906183915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2960e04432d504ea04655c213e0eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nPCQuest: {fileID: 7878525507104311764}
+  canGiveReward: 1
+  rewardItemName: {fileID: 11400000, guid: 16748458cfb7ee8478d63bd4f4b9d9c0, type: 2}
+  givesDirectReward: 0
+  directRewardItemName: {fileID: 0}
+  hasAnimation: 0
+  dialog:
+    lines:
+    - The sky is clear, and it's an ideal moment for tea.
+    - Would you care to join me?
+--- !u!114 &7878525507104311764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27952185906183915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fe7164fa76e09498f5cd9f853393ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHaveQuest: 1
+  isOnQuestGiven: 0
+  dialogBelumNgasihQuest:
+    lines:
+    - May the divine bestow their blessings upon our quest for...
+    - Gold, Glory, and Gospel.
+  itemData: {fileID: 11400000, guid: 6135523cda21e714da893cce4d1bcb4e, type: 2}
+  dialogLagiNgasihQuest:
+    lines:
+    - It would be nice to have some tea while birdwatching.
+  dialogDiKasihItemQuest:
+    lines:
+    - Young one, you truly possess a blessed heart.
+    - In gratitude, accept this token from me.
+--- !u!58 &1660360919158512513
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751669864093771906}
+  m_GameObject: {fileID: 27952185906183915}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -95,58 +143,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.94
---- !u!114 &5897002773240608344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751669864093771906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2960e04432d504ea04655c213e0eab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nPCQuest: {fileID: 1479244728040862789}
-  canGiveReward: 1
-  rewardItemName: {fileID: 11400000, guid: 16748458cfb7ee8478d63bd4f4b9d9c0, type: 2}
-  givesDirectReward: 0
-  directRewardItemName: {fileID: 0}
-  hasAnimation: 0
-  dialog:
-    lines:
-    - The sky is clear, and it's an ideal moment for tea.
-    - Would you care to join me?
---- !u!114 &1479244728040862789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1751669864093771906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fe7164fa76e09498f5cd9f853393ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHaveQuest: 1
-  isOnQuestGiven: 0
-  dialogBelumNgasihQuest:
-    lines:
-    - May the divine bestow their blessings upon our quest for...
-    - Gold, Glory, and Gospel.
-  itemData: {fileID: 11400000, guid: 6135523cda21e714da893cce4d1bcb4e, type: 2}
-  dialogLagiNgasihQuest:
-    lines:
-    - It would be nice to have some tea while birdwatching.
-  dialogDiKasihItemQuest:
-    lines:
-    - Young one, you truly possess a blessed heart.
-    - In gratitude, accept this token from me.
---- !u!1 &5038934461103544290
+  m_Radius: 1.86
+--- !u!1 &6719846854800507721
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,9 +154,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5047833043541297520}
-  - component: {fileID: 4549967773242399124}
-  - component: {fileID: 1565662568485641089}
+  - component: {fileID: 3776600274148574895}
+  - component: {fileID: 8601112271400434915}
+  - component: {fileID: 3992686246640490240}
   m_Layer: 7
   m_Name: NPC_Visual
   m_TagString: Untagged
@@ -164,28 +164,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5047833043541297520
+--- !u!4 &3776600274148574895
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038934461103544290}
+  m_GameObject: {fileID: 6719846854800507721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2694308395075790989}
+  m_Father: {fileID: 3066284707349729125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4549967773242399124
+--- !u!212 &8601112271400434915
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038934461103544290}
+  m_GameObject: {fileID: 6719846854800507721}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -231,13 +231,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1565662568485641089
+--- !u!58 &3992686246640490240
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5038934461103544290}
+  m_GameObject: {fileID: 6719846854800507721}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -265,4 +265,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.45
+  m_Radius: 0.46
