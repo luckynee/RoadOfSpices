@@ -19,11 +19,5 @@ public class NPCQuest : MonoBehaviour
     public Dialog dialogLagiNgasihQuest;
     [Header("NPC Dialog Quest Complete + Give Item")]
     public Dialog dialogDiKasihItemQuest;
-
-    //Quest Kedua
-    [Header("NPC Quest Kedua")]
-    public bool isHaveSecondQuest;
-    [Header("NPC Dialog Quest Kedua")]
-    public Dialog dialogSecondQuest;
     
 }

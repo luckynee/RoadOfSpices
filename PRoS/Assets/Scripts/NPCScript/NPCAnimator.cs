@@ -4,22 +4,11 @@ using UnityEngine;
 
 public class NPCAnimator : MonoBehaviour
 {
-    private Animator animator;
+    [SerializeField] private Animator animator; // --> pindahakan ke scriptVisual
 
-    private void Start()
+    void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // pisah visual dan logic
     }
 
-    // Method untuk memulai animasi perpindahan posisi
-    public void StartMoveAnimation()
-    {
-        animator.SetBool("IsMoving", true);
-    }
-
-    // Method untuk menghentikan animasi perpindahan posisi
-    public void StopMoveAnimation()
-    {
-        animator.SetBool("IsMoving", false);
-    }
 }

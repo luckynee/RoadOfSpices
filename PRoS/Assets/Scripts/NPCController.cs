@@ -19,9 +19,6 @@ public class NPCController : MonoBehaviour, Interactable
     [SerializeField] private bool givesDirectReward = false;
     [SerializeField] private ItemData directRewardItemName;
 
-    //npc memiliki quest lagi
-    [SerializeField] private bool haveQuest;
-
     //apakah npc memiliki animasi
     [Header("Animation NPC")]
     [SerializeField] private bool hasAnimation = false;
@@ -29,13 +26,13 @@ public class NPCController : MonoBehaviour, Interactable
     [Header("NPC Dialog Non Quest/Quest is Complete")]
     [SerializeField] private Dialog dialog;
 
-    private NPCAnimator nPCAnimator;
-
     private const string ISQUESTCOMPLETE = "isQuestComplete";
 
-    private void Start()
+    private Animator animator; // --> pindahakan ke scriptVisual
+
+    void Start()
     {
-        nPCAnimator = GetComponent<NPCAnimator>();
+        animator = GetComponent<Animator>(); // pisah visual dan logic
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,24 +60,6 @@ public class NPCController : MonoBehaviour, Interactable
                     // dialog npc terima kasih
                     // ubah dialog NPC setelah menerima quest item
                     StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogDiKasihItemQuest));
-                    
-                    //Fungsi Quest Kedua Mulai dari sini
-                    if (nPCQuest.isHaveQuest && nPCQuest.isOnQuestGiven)
-                    {
-                        // Pengecekan quest kedua setelah menyelesaikan quest pertama
-                        if (nPCQuest.isHaveSecondQuest)
-                        {
-                            // Lakukan aksi atau tampilkan dialog untuk quest kedua
-                            // Contoh:
-                            StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogSecondQuest));
-                        }
-                        else
-                        {
-                            // Lakukan aksi atau tampilkan dialog untuk quest pertama
-                            // Contoh:
-                            StartCoroutine(DialogManager.Instance.ShowDialog(nPCQuest.dialogLagiNgasihQuest));
-                        }
-                    }
 
                     //nonaktifkan quest pada NPC
                     nPCQuest.isHaveQuest = false;
@@ -92,10 +71,10 @@ public class NPCController : MonoBehaviour, Interactable
                         Inventory.Instance.AddItem(rewardItemName);
 
                         //jika ada animasi 
-                        if (hasAnimation && nPCAnimator != null)
+                        if (hasAnimation && animator != null)
                         {
                             //aktifkan animasi
-                            nPCAnimator.StartMoveAnimation();
+                            animator.SetBool(ISQUESTCOMPLETE, true); 
                         }
                     }
 
@@ -122,10 +101,9 @@ public class NPCController : MonoBehaviour, Interactable
                     //berikan hadiah langsung ke player
                     Inventory.Instance.AddItem(directRewardItemName);
 
-                    if (hasAnimation && nPCAnimator != null)
+                    if (hasAnimation && animator != null)
                     {
-                        //aktifkan animasi
-                        nPCAnimator.StartMoveAnimation();
+                        animator.SetBool(ISQUESTCOMPLETE, true);
                     }
                 }
             }
