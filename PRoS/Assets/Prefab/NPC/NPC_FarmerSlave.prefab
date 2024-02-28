@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2685455792100838042
+--- !u!1 &931463894420725383
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,157 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 561615540166746166}
-  - component: {fileID: 3711014189525048334}
-  - component: {fileID: 438912594565951369}
-  - component: {fileID: 6116861626299965635}
-  - component: {fileID: 3124790778235764333}
-  m_Layer: 8
-  m_Name: NPC_FarmerSlave
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &561615540166746166
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685455792100838042}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: -0.44, z: 0}
-  m_LocalScale: {x: 0.54, y: 0.54, z: 0.54}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 2956829468221033510}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &3711014189525048334
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685455792100838042}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &438912594565951369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685455792100838042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2960e04432d504ea04655c213e0eab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nPCQuest: {fileID: 6116861626299965635}
-  canGiveReward: 1
-  rewardItemName: {fileID: 11400000, guid: 4b6ddb0c14ace3342acf772d15354752, type: 2}
-  givesDirectReward: 0
-  directRewardItemName: {fileID: 0}
-  hasAnimation: 0
-  dialog:
-    lines:
-    - HAHAHAHAHAHAHAHAHAHAHA
---- !u!114 &6116861626299965635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685455792100838042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fe7164fa76e09498f5cd9f853393ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHaveQuest: 1
-  isOnQuestGiven: 0
-  dialogBelumNgasihQuest:
-    lines:
-    - After a hard day's work, it's time for some relaxation.
-    - Here, take this opium for a moment of respite.
-  itemData: {fileID: 11400000, guid: 428a31cd673cefa47889ced5fb0fc089, type: 2}
-  dialogLagiNgasihQuest:
-    lines:
-    - After a hard day's work, it's time for some relaxation.
-    - Here, take this opium for a moment of respite.
-  dialogDiKasihItemQuest:
-    lines:
-    - Ah, no worries!
-    - We've all been there.
-    - 'Have some fun with this. '
-    - I swiped it from his house, haha.
---- !u!58 &3124790778235764333
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2685455792100838042}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.19
---- !u!1 &7002371779023883542
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2956829468221033510}
-  - component: {fileID: 5260104677026744737}
-  - component: {fileID: 5534594399005304843}
+  - component: {fileID: 1232721017749673075}
+  - component: {fileID: 7449898968934975849}
+  - component: {fileID: 6499952970588876016}
   m_Layer: 7
   m_Name: NPC_Visual
   m_TagString: Untagged
@@ -166,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2956829468221033510
+--- !u!4 &1232721017749673075
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7002371779023883542}
+  m_GameObject: {fileID: 931463894420725383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 561615540166746166}
+  m_Father: {fileID: 2557514735004829519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5260104677026744737
+--- !u!212 &7449898968934975849
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7002371779023883542}
+  m_GameObject: {fileID: 931463894420725383}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -233,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5534594399005304843
+--- !u!58 &6499952970588876016
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7002371779023883542}
+  m_GameObject: {fileID: 931463894420725383}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -267,12 +119,6 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-  m_Radius: 0.65
-=======
->>>>>>> Stashed changes
   m_Radius: 0.16
 --- !u!1 &6338869063419752860
 GameObject:
@@ -422,4 +268,3 @@ MonoBehaviour:
     - We've all been there.
     - 'Have some fun with this. '
     - I swiped it from his house, haha.
->>>>>>> 631be2a7e207fa665e6da423b6477eca9eb6c512
