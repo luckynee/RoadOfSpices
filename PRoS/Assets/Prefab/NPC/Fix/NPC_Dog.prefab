@@ -29,18 +29,8 @@ Transform:
   m_GameObject: {fileID: 218119908433664301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< Updated upstream
-  m_LocalPosition: {x: 4, y: -20.03, z: -0.71872646}
-  m_LocalScale: {x: 0.135, y: 0.135, z: 0.135}
-=======
-<<<<<<< HEAD
-  m_LocalPosition: {x: 3.88, y: -20.01, z: 0}
+  m_LocalPosition: {x: 3.88, y: -20.01, z: -0.71872646}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-=======
-  m_LocalPosition: {x: 4, y: -20.03, z: -0.71872646}
-  m_LocalScale: {x: 0.135, y: 0.135, z: 0.135}
->>>>>>> 631be2a7e207fa665e6da423b6477eca9eb6c512
->>>>>>> Stashed changes
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9013004250225949137}
@@ -153,89 +143,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
   m_Radius: 2.5
 --- !u!1 &6995697412995312614
-=======
->>>>>>> Stashed changes
-  m_Radius: 7.18
---- !u!114 &3478360877208626038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003666147573369797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2960e04432d504ea04655c213e0eab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nPCQuest: {fileID: 742356447045610890}
-  canGiveReward: 0
-  rewardItemName: {fileID: 0}
-  givesDirectReward: 0
-  directRewardItemName: {fileID: 0}
-  hasAnimation: 0
-  dialog:
-    lines:
-    - Woof woof!
---- !u!114 &742356447045610890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003666147573369797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fe7164fa76e09498f5cd9f853393ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHaveQuest: 1
-  isOnQuestGiven: 0
-  dialogBelumNgasihQuest:
-    lines:
-    - Grr
-  itemData: {fileID: 11400000, guid: ca892781183bf304788a3f74067c3a97, type: 2}
-  dialogLagiNgasihQuest:
-    lines:
-    - Grrr
-  dialogDiKasihItemQuest:
-    lines:
-    - Grrr
-    - Woof...
---- !u!50 &9146956863751352629
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003666147573369797}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &7934883954521296158
->>>>>>> 631be2a7e207fa665e6da423b6477eca9eb6c512
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: -933648901
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d30b5be17e33ea34d8483ea7a4a74e02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 099c0e5a7a602a042a867f36a303214a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -354,12 +263,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-<<<<<<< Updated upstream
-  m_Radius: 1.77
-=======
-<<<<<<< HEAD
   m_Radius: 0.94
-=======
-  m_Radius: 1.77
->>>>>>> 631be2a7e207fa665e6da423b6477eca9eb6c512
->>>>>>> Stashed changes
